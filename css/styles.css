@@ -1,0 +1,158 @@
+/* Footer social */
+
+.social-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem 0 1.2rem 0;
+    background: transparent;
+    margin-top: 2.5rem;
+}
+.social-footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+}
+.social-footer a:hover, .social-footer a:focus {
+    background: #ffd86b;
+    transform: scale(1.08);
+}
+.social-footer svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
+/* Botón moderno */
+
+.btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.55rem 1.6rem;
+    min-height: 38px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #ffd86b 0%, #ffb86b 100%);
+    color: #232526;
+    font-weight: 700;
+    font-size: 1.08rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    vertical-align: middle;
+}
+.btn:hover, .btn:focus {
+    background: linear-gradient(90deg, #ffb86b 0%, #ffd86b 100%);
+    color: #232526;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Block style */
+
+span.contact-highlight {
+    color: #ffd86b;
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Cascadia Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #f4f4f4;
+    letter-spacing: 0.02em;
+    transition: background 0.5s;
+}
+
+header {
+    background: rgba(30, 30, 40, 0.95);
+    color: #fff;
+    padding: 2rem 1rem 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1.2rem;
+}
+
+nav ul li a {
+    color: #ffd86b;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+nav ul li a:hover, nav ul li a:focus {
+    background: #ffd86b;
+    color: #232526;
+}
+
+main {
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+    background: rgba(34, 36, 40, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+}
+
+section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+    transition: background 0.3s;
+}
+section:hover {
+    background: rgba(255, 255, 255, 0.09);
+}
+
+h1, h2 {
+    font-family: 'Cascadia Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.7rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffd86b;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5rem;    
+    color: #ffd86b;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin: 0.5rem 0 0 0;
+    text-align: justify;
+}
