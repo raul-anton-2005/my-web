@@ -34,15 +34,17 @@
 /* Botón moderno */
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1.2rem;
-    padding: 0.55rem 1.6rem;
-    min-height: 38px;
+    padding: 0.32rem 1.3rem;
+    min-height: 30px;
     line-height: 1.2;
     background: linear-gradient(90deg, #ffd86b 0%, #ffb86b 100%);
     color: #232526;
     font-weight: 700;
-    font-size: 1.08rem;
+    font-size: 1.02rem;
     border: none;
     border-radius: 8px;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
