@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         var data = new FormData(form);
-        fetch('https://formspree.io/f/xqabrppp', {
+        fetch(FORMSPREE_ENDPOINT, {
             method: 'POST',
             body: data,
             headers: { 'Accept': 'application/json' }
