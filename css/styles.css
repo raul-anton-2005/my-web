@@ -2,6 +2,7 @@
 body, h1, h2, h3, h4, h5, h6, p, a, li, ul, nav, header, main, section, footer, input, button, textarea {
     font-family: 'Cascadia Code', 'Consolas', 'monospace' !important;
 }
+
 /* Footer social */
 
 .social-footer {
@@ -13,6 +14,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, ul, nav, header, main, section, footer, 
     background: transparent;
     margin-top: 2.5rem;
 }
+
 .social-footer a {
     display: inline-flex;
     align-items: center;
@@ -25,10 +27,12 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, ul, nav, header, main, section, footer, 
     height: 48px;
     text-decoration: none;
 }
+
 .social-footer a:hover, .social-footer a:focus {
     background: #ffd86b;
     transform: scale(1.08);
 }
+
 .social-footer svg {
     display: block;
     width: 28px;
@@ -57,10 +61,21 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, ul, nav, header, main, section, footer, 
     transition: background 0.2s, color 0.2s, transform 0.15s;
     vertical-align: middle;
 }
+
 .btn:hover, .btn:focus {
     background: linear-gradient(90deg, #ffb86b 0%, #ffd86b 100%);
     color: #232526;
     transform: translateY(-2px) scale(1.04);
+}
+
+/* Fade-in/out para transiciones suaves entre páginas */
+.fade-transition {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.fade-in {
+    opacity: 1 !important;
+    transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 
 /* Block style */
@@ -116,6 +131,7 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 /* Más espaciado entre filas de listas */
+
 ul li, ol li {
     margin-bottom: 0.7em;
     line-height: 2.3;
@@ -138,6 +154,7 @@ section {
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
     transition: background 0.3s;
 }
+
 section:hover {
     background: rgba(255, 255, 255, 0.09);
 }
