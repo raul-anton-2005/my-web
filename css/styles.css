@@ -1,3 +1,7 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@5.0.14/index.min.css');
+body, h1, h2, h3, h4, h5, h6, p, a, li, ul, nav, header, main, section, footer, input, button, textarea {
+    font-family: 'Cascadia Code', 'Consolas', 'monospace' !important;
+}
 /* Footer social */
 
 .social-footer {
@@ -67,7 +71,6 @@ span.contact-highlight {
 }
 
 body {
-    font-family: 'Cascadia Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
     margin: 0;
     padding: 0;
     min-height: 100vh;
