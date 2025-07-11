@@ -79,7 +79,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.2rem;
+    margin-top: 0.2rem;
     padding: 0.32rem 1.3rem;
     min-height: 30px;
     line-height: 1.2;
