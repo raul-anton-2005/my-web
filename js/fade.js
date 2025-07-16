@@ -20,3 +20,9 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        document.body.classList.add('fade-in');
+    }
+});
