@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Manejo de la transición al volver a cargar la página
 window.addEventListener('pageshow', function(event) {
     if (event.persisted) {
         document.body.classList.add('fade-in');
