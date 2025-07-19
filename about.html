@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mí - Raúl Antón Echevarría</title>
+    <meta name="description" content="Portfolio de Raúl Antón Echevarría, estudiante de Inteligencia Robótica.">
     <link rel="icon" type="image/png" href="imgs/logo.ico">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,8 +14,8 @@
     </header>
     <main>
         <section>
-            <h2>ℹ️ Mi historia</h2>
-            <p>Soy estudiante del Grado en Inteligencia Robótica en la Universitat Jaume I, 
+            <h2 id="historia-title">ℹ️ Mi historia</h2>
+            <p id="historia-text">Soy estudiante del Grado en Inteligencia Robótica en la Universitat Jaume I, 
                 con una nota media cercana al 9 y menciones honoríficas en asignaturas 
                 clave como Programación, Física o Inteligencia Artificial. Apasionado por la 
                 tecnología y el aprendizaje continuo, he desarrollado diversos proyectos propios 
@@ -24,13 +25,13 @@
                 para seguir creciendo y aplicar mis conocimientos en entornos reales.</p>
         </section>
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.2rem;">
-            <a class="btn" href="docs/expediente-grado.pdf" target="_blank" rel="noopener">Expediente académico</a>
+            <a class="btn" id="expediente-btn" href="docs/expediente-grado.pdf" target="_blank" rel="noopener">Expediente académico</a>
         </div>
         <br>
         <br>
         <section>
-            <h2>🧠 Skills técnicas</h2>
-            <ul>
+            <h2 id="skills-tec-title">🧠 Skills técnicas</h2>
+            <ul id="skills-tec-list">
                 <li><strong>Lenguajes de programación:</strong> Python, C++, Java, Bash</li>
                 <li><strong>Herramientas y entornos:</strong> ROS2, Android Studio</li>
                 <li><strong>Ámbitos de conocimiento:</strong> Inteligencia artificial, Robótica, Simulación, Programación avanzada, Física aplicada, Sistemas operativos</li>
@@ -38,13 +39,13 @@
             </ul>
         </section>
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.2rem;">
-            <a class="btn" href="certificates.html" target="_blank" rel="noopener">Certificados</a>
+            <a class="btn" id="certificados-btn" href="certificates.html" target="_blank" rel="noopener">Certificados</a>
         </div>
         <br>
         <br>
         <section>
-            <h2>💼 Skills personales y blandas</h2>
-            <ul>
+            <h2 id="skills-pers-title">💼 Skills personales y blandas</h2>
+            <ul id="skills-pers-list">
                 <li>Compromiso con el aprendizaje continuo</li>
                 <li>Enfoque autodidacta</li>
                 <li>Capacidad de análisis y resolución de problemas complejos</li>
@@ -57,8 +58,8 @@
             </ul>
         </section>
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.2rem;">
-            <a class="btn" href="docs/cv-raul-anton.pdf" target="_blank" rel="noopener">Descargar CV</a>
-            <a class="btn" href="index.html">Volver al inicio</a>
+            <a class="btn" id="descargar-cv" href="docs/cv-raul-anton.pdf" target="_blank" rel="noopener">Descargar CV</a>
+            <a class="btn" id="volver-inicio" href="index.html">Volver al inicio</a>
         </div>
     </main>
     <footer class="social-footer">
@@ -74,5 +75,6 @@
         </a>
     </footer>
     <script src="js/fade.js"></script>
+    <script src="js/lang-about.js"></script>
 </body>
 </html>
