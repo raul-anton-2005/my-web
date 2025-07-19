@@ -41,6 +41,11 @@ window.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#contact .btn').textContent = translations[lang].contactBtn;
         document.title = translations[lang].title;
         document.querySelector('meta[name="description"]').setAttribute('content', translations[lang].metaDesc);
+
+        localStorage.setItem('lang', lang);
+        const flag = document.getElementById('flag-current');
+        const btn = document.querySelector('.lang-option[data-lang="' + lang + '"] img');
+        if (flag && btn && btn.src) flag.src = btn.src;
     }
 
     // Selector de idioma
@@ -83,4 +88,8 @@ window.addEventListener('DOMContentLoaded', function() {
             dropdown.style.display = 'none';
         });
     });
+
+    // Idioma inicial persistente y bandera dinámica
+    const savedLang = localStorage.getItem('lang') || 'es';
+    setLang(savedLang);
 });

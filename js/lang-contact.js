@@ -35,6 +35,11 @@ window.addEventListener('DOMContentLoaded', function() {
         document.querySelector('textarea[name="mensaje"]').placeholder = translations[lang].mensaje;
         document.querySelector('button[type="submit"]').textContent = translations[lang].enviar;
         document.getElementById('volver-inicio').textContent = translations[lang].volver;
+
+        localStorage.setItem('lang', lang);
+        const flag = document.getElementById('flag-current');
+        const btn = document.querySelector('.lang-option[data-lang="' + lang + '"] img');
+        if (flag && btn && btn.src) flag.src = btn.src;
     }
 
     // Selector de idioma
@@ -73,15 +78,12 @@ window.addEventListener('DOMContentLoaded', function() {
         opt.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
             setLang(lang);
-            document.getElementById('flag-current').src = lang === 'es' ? 'imgs/spain.svg' : 'imgs/usa.svg';
             dropdown.style.display = 'none';
         });
     });
 
-    // Añadir id al botón volver si no existe
-    const volverBtn = document.querySelector('a.btn[href="index.html"]');
-    if (volverBtn && !volverBtn.id) volverBtn.id = 'volver-inicio';
-
-    // Idioma inicial
-    setLang('es');
+    
+    // Idioma inicial persistente y bandera dinámica
+    const savedLang = localStorage.getItem('lang') || 'es';
+    setLang(savedLang);
 });

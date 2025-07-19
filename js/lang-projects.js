@@ -44,6 +44,12 @@ window.addEventListener('DOMContentLoaded', function() {
         document.getElementById('ai-btn').textContent = translations[lang].verRepo;
         // Volver
         document.getElementById('volver-inicio').textContent = translations[lang].volver;
+        // Guardar idioma en localStorage
+        localStorage.setItem('lang', lang);
+        // Actualizar bandera de forma dinámica según el idioma
+        const flag = document.getElementById('flag-current');
+        const btn = document.querySelector('.lang-option[data-lang="' + lang + '"] img');
+        if (flag && btn && btn.src) flag.src = btn.src;
     }
 
     // Selector de idioma
@@ -82,7 +88,6 @@ window.addEventListener('DOMContentLoaded', function() {
         opt.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
             setLang(lang);
-            document.getElementById('flag-current').src = lang === 'es' ? 'imgs/spain.svg' : 'imgs/usa.svg';
             dropdown.style.display = 'none';
         });
     });
@@ -100,5 +105,7 @@ window.addEventListener('DOMContentLoaded', function() {
     if (!document.getElementById('volver-inicio')) document.querySelector('a.btn[href="index.html"]').id = 'volver-inicio';
 
     // Idioma inicial
-    setLang('es');
+    // Al cargar, usar el idioma guardado o español por defecto
+    const savedLang = localStorage.getItem('lang') || 'es';
+    setLang(savedLang);
 });
