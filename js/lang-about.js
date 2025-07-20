@@ -91,11 +91,11 @@ window.addEventListener('DOMContentLoaded', function() {
             <img src="imgs/spain.svg" alt="Español" id="flag-current" style="width:24px;height:24px;vertical-align:middle;">
             <img src="imgs/bottom.svg" alt="Abrir selector" style="width:18px;height:18px;vertical-align:middle;">
         </button>
-        <div id="lang-dropdown" style="display:none;position:absolute;top:36px;right:0;background:#232526;border-radius:8px;box-shadow:0 2px 8px 0 rgba(0,0,0,0.13);padding:0.5em 0;z-index:1000;">
-            <button class="lang-option" data-lang="es" style="background:none;border:none;display:flex;align-items:center;gap:0.5em;padding:0.5em 1.2em;width:100%;cursor:pointer;">
+        <div id="lang-dropdown" style="display:none;position:absolute;top:36px;right:0;background:#232526;border-radius:8px;box-shadow:0 2px 8px 0 rgba(255, 255, 255, 0.77);padding:0.5em 0;z-index:1000;">
+            <button class="lang-option" data-lang="es" style="background:none;border:none;display:flex;align-items:center;gap:0.5em;padding:0.5em 1.2em;width:100%;cursor:pointer;color:#fff;">
                 <img src="imgs/spain.svg" alt="Español" style="width:22px;height:22px;"> Español
             </button>
-            <button class="lang-option" data-lang="en" style="background:none;border:none;display:flex;align-items:center;gap:0.5em;padding:0.5em 1.2em;width:100%;cursor:pointer;">
+            <button class="lang-option" data-lang="en" style="background:none;border:none;display:flex;align-items:center;gap:0.5em;padding:0.5em 1.2em;width:100%;cursor:pointer;color:#fff;">
                 <img src="imgs/usa.svg" alt="English" style="width:22px;height:22px;"> English
             </button>
         </div>
