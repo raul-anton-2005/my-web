@@ -5,13 +5,23 @@ window.addEventListener('DOMContentLoaded', function() {
             title: 'Certificados - Raúl Antón Echevarría',
             h1: 'Certificados',
             section: '✉️ Certificados',
-            desc: 'En esta sección encontrarás los certificados de mis cursos y logros académicos.'
+            desc: 'En esta sección encontrarás los certificados de mis cursos y logros académicos.',
+            captions: [
+                'C1 de Inglés',
+                'C1 de Valenciano',
+                'Título de Android Studio'
+            ]
         },
         en: {
             title: 'Certificates - Raúl Antón Echevarría',
             h1: 'Certificates',
             section: '✉️ Certificates',
-            desc: 'In this section you will find the certificates of my courses and academic achievements.'
+            desc: 'In this section you will find the certificates of my courses and academic achievements.',
+            captions: [
+                'English C1 Certificate',
+                'Valencian C1 Certificate',
+                'Android Studio Certificate'
+            ]
         }
     };
 
@@ -20,7 +30,12 @@ window.addEventListener('DOMContentLoaded', function() {
         document.querySelector('h1').textContent = translations[lang].h1;
         document.querySelector('h2').textContent = translations[lang].section;
         document.querySelector('section p').textContent = translations[lang].desc;
-        
+        // Traducir captions del carrusel
+        var captions = document.querySelectorAll('.slideshow-container .mySlides .text');
+        translations[lang].captions.forEach(function(txt, i) {
+            if (captions[i]) captions[i].textContent = txt;
+        });
+
         localStorage.setItem('lang', lang);
         const flag = document.getElementById('flag-current');
         const btn = document.querySelector('.lang-option[data-lang="' + lang + '"] img');
