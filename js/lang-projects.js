@@ -10,6 +10,8 @@ window.addEventListener('DOMContentLoaded', function() {
             rosDesc: 'Espacio de trabajo en ROS2 que agrupa diversos proyectos, incluyendo aplicaciones de robótica y simulaciones que ilustran el uso de ROS2 en escenarios prácticos y entornos reales.',
             ai: '🔍 Proyectos de IA',
             aiDesc: 'Conjunto de proyectos de inteligencia artificial que integran modelos de aprendizaje automático y aplicaciones prácticas desarrolladas en Python. Incluyen soluciones como algoritmos de búsqueda de caminos (pathfinding), clasificadores y otras implementaciones orientadas a problemas reales.',
+            calc: '💰 Calculadora de Interés Compuesto',
+            calcDesc: 'Calculadora de interés compuesto desarrollada en Android Studio, que permite a los usuarios calcular el crecimiento de una inversión a lo largo del tiempo, considerando diferentes tasas de interés y períodos.',
             verRepo: 'Ver repo',
             volver: 'Volver al inicio'
         },
@@ -22,6 +24,8 @@ window.addEventListener('DOMContentLoaded', function() {
             rosDesc: 'ROS2 workspace that groups various projects, including robotics applications and simulations that illustrate the use of ROS2 in practical and real-world scenarios.',
             ai: '🔍 AI Projects',
             aiDesc: 'A set of artificial intelligence projects that integrate machine learning models and practical applications developed in Python. Includes solutions such as pathfinding algorithms, classifiers, and other implementations aimed at real-world problems.',
+            calc: '💰 Compound Interest Calculator',
+            calcDesc: 'Compound interest calculator developed in Android Studio, allowing users to calculate the growth of an investment over time, considering different interest rates and periods.',
             verRepo: 'View repo',
             volver: 'Back to home'
         }
@@ -42,6 +46,10 @@ window.addEventListener('DOMContentLoaded', function() {
         document.getElementById('ai-title').textContent = translations[lang].ai;
         document.getElementById('ai-desc').textContent = translations[lang].aiDesc;
         document.getElementById('ai-btn').textContent = translations[lang].verRepo;
+        // Calculadora de Interés Compuesto
+        document.getElementById('calc-title').textContent = translations[lang].calc;
+        document.getElementById('calc-desc').textContent = translations[lang].calcDesc
+        document.getElementById('calc-btn').textContent = translations[lang].verRepo;
         // Volver
         document.getElementById('volver-inicio').textContent = translations[lang].volver;
         // Guardar idioma en localStorage
@@ -103,6 +111,9 @@ window.addEventListener('DOMContentLoaded', function() {
     if (!document.getElementById('ai-desc')) document.querySelectorAll('section')[2].querySelector('p').id = 'ai-desc';
     if (!document.getElementById('ai-btn')) document.querySelectorAll('section')[2].querySelector('a.btn').id = 'ai-btn';
     if (!document.getElementById('volver-inicio')) document.querySelector('a.btn[href="index.html"]').id = 'volver-inicio';
+    if (!document.getElementById('calc-title')) this.document.querySelectorAll('h2')[3].id = 'calc-title';
+    if (!document.getElementById('calc-desc')) document.querySelectorAll('section')[3].querySelector('p').id = 'calc-desc';
+    if (!document.getElementById('calc-btn')) document.querySelectorAll('section')[3].querySelector('a.btn').id = 'calc-btn';
 
     // Idioma inicial
     // Al cargar, usar el idioma guardado o español por defecto
