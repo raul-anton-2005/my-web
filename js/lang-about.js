@@ -28,13 +28,14 @@ window.addEventListener('DOMContentLoaded', function() {
             expediente: 'Expediente académico',
             certificados: 'Certificados',
             descargar: 'Descargar CV',
-            volver: 'Volver al inicio'
+            volver: 'Volver al inicio',
+            cvHref: 'docs/cv-raul-anton.pdf'
         },
         en: {
             title: 'About me - Raúl Antón Echevarría',
             h1: 'About me',
             historia: 'ℹ️ My story',
-            historiaText: 'I am a student of the Degree in Robotic Intelligence at Universitat Jaume I, with an average grade close to 9 and more than ten honors in key subjects such as Programming, Physics or Artificial Intelligence. Passionate about technology and continuous learning, I have developed several personal projects applying AI, robotics and simulation with languages such as Python, C++ and Java. I master tools like ROS2, Android Studio and Bash, and I stand out for my analytical skills, perseverance and enthusiasm for solving complex challenges. I am looking for opportunities to continue growing and apply my knowledge in real environments.',
+            historiaText: 'I am a student of the Degree in Robotic Intelligence at Universitat Jaume I, with an average grade close to 9 and more than ten honors in key subjects such as Programming, Physics or Artificial Intelligence. Passionate about technology and continuous learning, I have developed several personal projects applying AI, robotics and simulation with languages such as Python, C++, and Java. I master tools like ROS2, Android Studio and Bash, and I stand out for my analytical skills, perseverance and enthusiasm for solving complex challenges. I am looking for opportunities to continue growing and apply my knowledge in real environments.',
             skillsTec: '🧠 Technical skills',
             skillsTecList: [
                 '<strong>Programming languages:</strong> Python, C++, Java, Bash',
@@ -57,25 +58,28 @@ window.addEventListener('DOMContentLoaded', function() {
             expediente: 'Academic transcript',
             certificados: 'Certificates',
             descargar: 'Download CV',
-            volver: 'Back to home'
+            volver: 'Back to home',
+            cvHref: 'docs/cv-raul-anton-eng.pdf'
         }
     };
 
     function setLang(lang) {
-        document.title = translations[lang].title;
-        document.querySelector('h1').textContent = translations[lang].h1;
-        document.getElementById('historia-title').textContent = translations[lang].historia;
-        document.getElementById('historia-text').textContent = translations[lang].historiaText;
-        document.getElementById('skills-tec-title').textContent = translations[lang].skillsTec;
-        const ulTec = document.getElementById('skills-tec-list');
-        ulTec.innerHTML = translations[lang].skillsTecList.map(x => `<li>${x}</li>`).join('');
-        document.getElementById('skills-pers-title').textContent = translations[lang].skillsPers;
-        const ulPers = document.getElementById('skills-pers-list');
-        ulPers.innerHTML = translations[lang].skillsPersList.map(x => `<li>${x}</li>`).join('');
-        document.getElementById('expediente-btn').textContent = translations[lang].expediente;
-        document.getElementById('certificados-btn').textContent = translations[lang].certificados;
-        document.getElementById('descargar-cv').textContent = translations[lang].descargar;
-        document.getElementById('volver-inicio').textContent = translations[lang].volver;
+        const t = translations[lang];
+        document.title = t.title;
+        document.querySelector('h1').textContent = t.h1;
+        document.getElementById('historia-title').textContent = t.historia;
+        document.getElementById('historia-text').textContent = t.historiaText;
+        document.getElementById('skills-tec-title').textContent = t.skillsTec;
+        document.getElementById('skills-tec-list').innerHTML = t.skillsTecList.map(x => `<li>${x}</li>`).join('');
+        document.getElementById('skills-pers-title').textContent = t.skillsPers;
+        document.getElementById('skills-pers-list').innerHTML = t.skillsPersList.map(x => `<li>${x}</li>`).join('');
+        document.getElementById('expediente-btn').textContent = t.expediente;
+        document.getElementById('certificados-btn').textContent = t.certificados;
+        document.getElementById('descargar-cv').textContent = t.descargar;
+        document.getElementById('volver-inicio').textContent = t.volver;
+
+        // 🔁 Cambiar href del botón de descarga del CV
+        document.getElementById('descargar-cv').setAttribute('href', t.cvHref);
 
         localStorage.setItem('lang', lang);
         const flag = document.getElementById('flag-current');
