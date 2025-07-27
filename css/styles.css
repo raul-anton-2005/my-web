@@ -319,3 +319,69 @@ textarea:focus {
         opacity: 1;
     }
 }
+
+/* === Lang toggle === */
+.lang-toggle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.lang-toggle-btn img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    background: #232526;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.77);
+    padding: 0.5em 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.lang-option {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 1.2em;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.lang-option img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Pseudoelemento para el borde animado */
+.lang-option::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1.5px;
+    background: #ffffffca;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.lang-option:hover::before {
+    transform: scaleX(1);
+}
