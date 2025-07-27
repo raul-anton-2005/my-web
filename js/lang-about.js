@@ -29,7 +29,8 @@ window.addEventListener('DOMContentLoaded', function() {
             certificados: 'Certificados',
             descargar: 'Descargar CV',
             volver: 'Volver al inicio',
-            cvHref: 'docs/cv-raul-anton.pdf'
+            cvHref: 'docs/cv-raul-anton.pdf',
+            expHref: 'docs/expediente-grado.pdf',
         },
         en: {
             title: 'About me - Raúl Antón Echevarría',
@@ -59,7 +60,8 @@ window.addEventListener('DOMContentLoaded', function() {
             certificados: 'Certificates',
             descargar: 'Download CV',
             volver: 'Back to home',
-            cvHref: 'docs/cv-raul-anton-eng.pdf'
+            cvHref: 'docs/cv-raul-anton-eng.pdf',
+            expHref: 'docs/expediente-grado-eng.pdf',
         }
     };
 
@@ -78,8 +80,9 @@ window.addEventListener('DOMContentLoaded', function() {
         document.getElementById('descargar-cv').textContent = t.descargar;
         document.getElementById('volver-inicio').textContent = t.volver;
 
-        // 🔁 Cambiar href del botón de descarga del CV
+        // 🔁 Cambiar href del botón de descarga del CV y Expediente
         document.getElementById('descargar-cv').setAttribute('href', t.cvHref);
+        document.getElementById('expediente-btn').setAttribute('href', t.expHref);
 
         localStorage.setItem('lang', lang);
         const flag = document.getElementById('flag-current');
