@@ -1,5 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
+/* === Reset y configuración global === */
+* {
+    box-sizing: border-box;
+}
+
 body,
 h1,
 h2,
@@ -22,134 +27,7 @@ textarea {
     font-family: 'Cascadia Code', 'Consolas', 'monospace' !important;
 }
 
-/* Input de asunto ocupa 100% y no se sale de los márgenes */
-input[name="asunto"] {
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    margin-top: 1rem;
-}
-
-/* Textarea de mensaje: sin resize y auto-ajuste de altura */
-textarea {
-    resize: none;
-    overflow-y: hidden;
-    min-height: 90px;
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Fondo amarillo para los campos del formulario de contacto */
-input[type="text"],
-input[type="email"],
-textarea {
-    background: #ffd86b;
-    color: #232526;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.05rem;
-    padding: 0.6em 1em;
-    margin-top: 0.5em;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.2s, background 0.2s;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    outline: 2px solid #ffb86b;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.13);
-    background: #ffe9a3;
-}
-
-/* Footer social */
-
-.social-footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1.5rem 0 1.2rem 0;
-    background: transparent;
-    margin-top: 2.5rem;
-}
-
-.social-footer a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    transition: background 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.10);
-    width: 48px;
-    height: 48px;
-    text-decoration: none;
-}
-
-.social-footer a:hover,
-.social-footer a:focus {
-    background: #ffd86b;
-    transform: scale(1.08);
-}
-
-.social-footer svg {
-    display: block;
-    width: 28px;
-    height: 28px;
-}
-
-/* Botón moderno */
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.2rem;
-    padding: 0.32rem 1.3rem;
-    min-height: 30px;
-    line-height: 1.2;
-    background: linear-gradient(90deg, #ffd86b 0%, #ffb86b 100%);
-    color: #232526;
-    font-weight: 700;
-    font-size: 1.02rem;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.10);
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s, transform 0.15s;
-    vertical-align: middle;
-}
-
-.btn:hover,
-.btn:focus {
-    background: linear-gradient(90deg, #ffb86b 0%, #ffd86b 100%);
-    color: #232526;
-    transform: translateY(-2px) scale(1.04);
-}
-
-/* Fade-in/out para transiciones suaves entre páginas */
-.fade-transition {
-    opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fade-in {
-    opacity: 1 !important;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-
-/* Block style */
-
-span.contact-highlight {
-    color: #ffd86b;
-    font-weight: 600;
-}
-
+/* === Base === */
 body {
     margin: 0;
     padding: 0;
@@ -160,6 +38,36 @@ body {
     transition: background 0.5s;
 }
 
+h1 {
+    font-size: 2.5rem;
+    color: #ffd86b;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #ffd86b;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin: 0.5rem 0 0 0;
+}
+
+ul li,
+ol li {
+    margin-bottom: 0.7em;
+    line-height: 2.3;
+}
+
+span.contact-highlight {
+    color: #ffd86b;
+    font-weight: 600;
+}
+
+/* === Layout === */
 header {
     background: rgba(30, 30, 40, 0.95);
     color: #fff;
@@ -197,14 +105,6 @@ nav ul li a:focus {
     color: #232526;
 }
 
-/* Más espaciado entre filas de listas */
-
-ul li,
-ol li {
-    margin-bottom: 0.7em;
-    line-height: 2.3;
-}
-
 main {
     padding: 2.5rem 1.5rem 2rem 1.5rem;
     max-width: 700px;
@@ -227,42 +127,132 @@ section:hover {
     background: rgba(255, 255, 255, 0.09);
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #ffd86b;
-    margin-top: 0;
+/* === Formularios === */
+input[name="asunto"] {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin-top: 1rem;
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: #ffd86b;
+textarea {
+    resize: none;
+    overflow-y: hidden;
+    min-height: 90px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #e0e0e0;
-    margin: 0.5rem 0 0 0;
+input[type="text"],
+input[type="email"],
+textarea {
+    background: #ffd86b;
+    color: #232526;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    padding: 0.6em 1em;
+    margin-top: 0.5em;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s, background 0.2s;
 }
 
-
-* {
-    box-sizing: border-box
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: 2px solid #ffb86b;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.13);
+    background: #ffe9a3;
 }
 
-/* Slideshow container */
+/* === Botones === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.2rem;
+    padding: 0.32rem 1.3rem;
+    min-height: 30px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #ffd86b 0%, #ffb86b 100%);
+    color: #232526;
+    font-weight: 700;
+    font-size: 1.02rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    vertical-align: middle;
+}
+
+.btn:hover,
+.btn:focus {
+    background: linear-gradient(90deg, #ffb86b 0%, #ffd86b 100%);
+    color: #232526;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* === Footer social === */
+.social-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem 0 1.2rem 0;
+    background: transparent;
+    margin-top: 2.5rem;
+}
+
+.social-footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.10);
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+}
+
+.social-footer a:hover,
+.social-footer a:focus {
+    background: #ffd86b;
+    transform: scale(1.08);
+}
+
+.social-footer svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
+/* === Transiciones / utilidades === */
+.fade-transition {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* === Slideshow === */
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
     display: none;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
     cursor: pointer;
@@ -279,19 +269,16 @@ p {
     user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
 .text {
     color: #ffd86b;
     font-size: 15px;
@@ -302,16 +289,6 @@ p {
     text-align: center;
 }
 
-/* Number text (1/3 etc)
-.numbertext {
-    color: #ffd86b;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-} */
-
-/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -328,7 +305,6 @@ p {
     background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -336,10 +312,10 @@ p {
 
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: 0.4;
     }
 
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
