@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', function() {
     langSelector.innerHTML = `
         <button id="lang-btn" aria-label="Idioma" class="lang-toggle-btn">
             <img src="imgs/spain.svg" alt="Español" id="flag-current">
-            <img src="imgs/bottom.svg" alt="Abrir selector" id="lang-arrow">
+            <img src="imgs/bottom.svg" alt="Abrir selector" id="lang-arrow" style="width:24px;height:24px;vertical-align:middle;transition:opacity 0.18s;opacity:1;">
         </button>
         <div id="lang-dropdown" class="lang-dropdown">
             <button class="lang-option" data-lang="es">
@@ -76,15 +76,27 @@ window.addEventListener('DOMContentLoaded', function() {
     const dropdown = langSelector.querySelector('#lang-dropdown');
     btn.addEventListener('click', function(e) {
     e.stopPropagation();
-    const isOpen = dropdown.style.display === 'block';
-    dropdown.style.display = isOpen ? 'none' : 'block';
-    const arrow = langSelector.querySelector('#lang-arrow');
-    if (arrow) arrow.src = isOpen ? 'imgs/bottom.svg' : 'imgs/up.svg';
+        const isOpen = dropdown.style.display === 'block';
+        dropdown.style.display = isOpen ? 'none' : 'block';
+        const arrow = langSelector.querySelector('#lang-arrow');
+        if (arrow) {
+            arrow.style.opacity = 0;
+            setTimeout(function() {
+                arrow.src = isOpen ? 'imgs/bottom.svg' : 'imgs/up.svg';
+                arrow.style.opacity = 1;
+            }, 120);
+        }
     });
     document.addEventListener('click', function() {
     dropdown.style.display = 'none';
-    const arrow = langSelector.querySelector('#lang-arrow');
-    if (arrow) arrow.src = 'imgs/bottom.svg';
+        const arrow = langSelector.querySelector('#lang-arrow');
+        if (arrow) {
+            arrow.style.opacity = 0;
+            setTimeout(function() {
+                arrow.src = 'imgs/bottom.svg';
+                arrow.style.opacity = 1;
+            }, 120);
+        }
     });
     langSelector.querySelectorAll('.lang-option').forEach(function(opt) {
         opt.addEventListener('click', function() {
