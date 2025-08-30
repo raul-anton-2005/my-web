@@ -96,7 +96,7 @@ window.addEventListener('DOMContentLoaded', function() {
     langSelector.innerHTML = `
         <button id="lang-btn" aria-label="Idioma" class="lang-toggle-btn">
             <img src="imgs/spain.svg" alt="Español" id="flag-current">
-            <img src="imgs/bottom.svg" alt="Abrir selector">
+            <img src="imgs/bottom.svg" alt="Abrir selector" id="lang-arrow">
         </button>
         <div id="lang-dropdown" class="lang-dropdown">
             <button class="lang-option" data-lang="es">
@@ -117,10 +117,15 @@ window.addEventListener('DOMContentLoaded', function() {
     const dropdown = langSelector.querySelector('#lang-dropdown');
     btn.addEventListener('click', function(e) {
         e.stopPropagation();
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        const isOpen = dropdown.style.display === 'block';
+        dropdown.style.display = isOpen ? 'none' : 'block';
+        const arrow = langSelector.querySelector('#lang-arrow');
+        if (arrow) arrow.src = isOpen ? 'imgs/bottom.svg' : 'imgs/up.svg';
     });
     document.addEventListener('click', function() {
         dropdown.style.display = 'none';
+        const arrow = langSelector.querySelector('#lang-arrow');
+        if (arrow) arrow.src = 'imgs/bottom.svg';
     });
     langSelector.querySelectorAll('.lang-option').forEach(function(opt) {
         opt.addEventListener('click', function() {
