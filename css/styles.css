@@ -337,7 +337,6 @@ textarea:focus {
 }
 
 .lang-dropdown {
-    display: none;
     position: absolute;
     top: 36px;
     right: 0;
@@ -347,6 +346,15 @@ textarea:focus {
     padding: 0.5em 0;
     z-index: 1000;
     overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.18s ease, visibility 0.18s ease;
+}
+
+.lang-dropdown.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .lang-option {

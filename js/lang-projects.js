@@ -86,9 +86,10 @@ window.addEventListener('DOMContentLoaded', function() {
     const btn = langSelector.querySelector('#lang-btn');
     const dropdown = langSelector.querySelector('#lang-dropdown');
     btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-        const isOpen = dropdown.style.display === 'block';
-        dropdown.style.display = isOpen ? 'none' : 'block';
+        e.stopPropagation();
+        const isOpen = dropdown.classList.contains('show');
+        dropdown.classList.toggle('show', !isOpen);
+
         const arrow = langSelector.querySelector('#lang-arrow');
         if (arrow) {
             arrow.style.opacity = 0;
@@ -98,8 +99,9 @@ window.addEventListener('DOMContentLoaded', function() {
             }, 120);
         }
     });
+
     document.addEventListener('click', function() {
-    dropdown.style.display = 'none';
+        dropdown.classList.remove('show');
         const arrow = langSelector.querySelector('#lang-arrow');
         if (arrow) {
             arrow.style.opacity = 0;
@@ -113,7 +115,7 @@ window.addEventListener('DOMContentLoaded', function() {
         opt.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
             setLang(lang);
-            dropdown.style.display = 'none';
+            dropdown.classList.remove('show');
         });
     });
 

@@ -69,33 +69,35 @@ window.addEventListener('DOMContentLoaded', function() {
     const dropdown = langSelector.querySelector('#lang-dropdown');
     btn.addEventListener('click', function(e) {
         e.stopPropagation();
-        const isOpen = dropdown.style.display === 'block';
-        dropdown.style.display = isOpen ? 'none' : 'block';
-            const arrow = langSelector.querySelector('#lang-arrow');
-            if (arrow) {
-                arrow.style.opacity = 0;
-                setTimeout(function() {
-                    arrow.src = isOpen ? 'imgs/bottom.svg' : 'imgs/up.svg';
-                    arrow.style.opacity = 1;
-                }, 120);
-            }
+        const isOpen = dropdown.classList.contains('show');
+        dropdown.classList.toggle('show', !isOpen);
+
+        const arrow = langSelector.querySelector('#lang-arrow');
+        if (arrow) {
+            arrow.style.opacity = 0;
+            setTimeout(function() {
+                arrow.src = isOpen ? 'imgs/bottom.svg' : 'imgs/up.svg';
+                arrow.style.opacity = 1;
+            }, 120);
+        }
     });
+
     document.addEventListener('click', function() {
-        dropdown.style.display = 'none';
+        dropdown.classList.remove('show');
+        const arrow = langSelector.querySelector('#lang-arrow');
+        if (arrow) {
+            arrow.style.opacity = 0;
+            setTimeout(function() {
+                arrow.src = 'imgs/bottom.svg';
+                arrow.style.opacity = 1;
+            }, 120);
+        }
     });
     langSelector.querySelectorAll('.lang-option').forEach(function(opt) {
         opt.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
             setLang(lang);
-            dropdown.style.display = 'none';
-                const arrow = langSelector.querySelector('#lang-arrow');
-                if (arrow) {
-                    arrow.style.opacity = 0;
-                    setTimeout(function() {
-                        arrow.src = 'imgs/bottom.svg';
-                        arrow.style.opacity = 1;
-                    }, 120);
-                }
+            dropdown.classList.remove('show');
         });
     });
 
