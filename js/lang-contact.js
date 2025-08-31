@@ -1,4 +1,11 @@
 // lang-contact.js - Selector de idioma y traducción para contact.html
+
+const arrowUp = new Image();
+arrowUp.src = 'imgs/up.svg';
+
+const arrowDown = new Image();
+arrowDown.src = 'imgs/bottom.svg';
+
 window.addEventListener('DOMContentLoaded', function() {
     const translations = {
         es: {
