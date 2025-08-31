@@ -342,19 +342,35 @@ textarea:focus {
     right: 0;
     background: #232526;
     border-radius: 8px;
-    box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.77);
     padding: 0.5em 0;
     z-index: 1000;
     overflow: hidden;
-
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.18s ease;
+
+    /* efecto glow inicial */
+    box-shadow: 0 0 8px #ffd86b, 0 0 10px #ffb86b;
 }
 
 .lang-dropdown.show {
     opacity: 1;
     visibility: visible;
+    animation: dropdown-glow 3s infinite alternate;
+}
+
+@keyframes dropdown-glow {
+    0% {
+        filter: drop-shadow(0 0 0.5px #ffd86b) drop-shadow(0 0 10px #ffb86b);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 1px #ffd86b) drop-shadow(0 0 15px #ffb86b);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 1.5px #ffd86b) drop-shadow(0 0 20px #ffb86b);
+    }
 }
 
 .lang-option {
