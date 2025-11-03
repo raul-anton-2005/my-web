@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 '<strong>Lenguajes de programación:</strong> Python, C++, Java, Bash',
                 '<strong>Herramientas y entornos:</strong> ROS2, Android Studio',
                 '<strong>Ámbitos de conocimiento:</strong> Inteligencia artificial, Robótica, Simulación, Programación avanzada, Física aplicada, Sistemas operativos',
-                '<strong>Idiomas:</strong> Español (nativo), Valenciano (nativo), Inglés (C1), Chino mandarín (nivel medio)'
+                '<strong>Idiomas:</strong> Español (nativo), Valenciano (nativo), Inglés (C1), Chino mandarín (HSKK intermedio)'
             ],
             skillsPers: '💼 Skills personales y blandas',
             skillsPersList: [
@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 '<strong>Programming languages:</strong> Python, C++, Java, Bash',
                 '<strong>Tools and environments:</strong> ROS2, Android Studio',
                 '<strong>Knowledge areas:</strong> Artificial intelligence, Robotics, Simulation, Advanced programming, Applied physics, Operating systems',
-                '<strong>Languages:</strong> Spanish (native), Valencian (native), English (C1), Mandarin Chinese (intermediate)'
+                '<strong>Languages:</strong> Spanish (native), Valencian (native), English (C1), Mandarin Chinese (HSKK intermediate)'
             ],
             skillsPers: '💼 Personal and soft skills',
             skillsPersList: [
