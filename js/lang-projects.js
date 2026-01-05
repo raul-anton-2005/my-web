@@ -11,6 +11,8 @@ window.addEventListener('DOMContentLoaded', function() {
         es: {
             title: 'Proyectos - Raúl Antón Echevarría',
             h1: 'Proyectos',
+            gallinet: '🐔 Gallinet',
+            gallinetDesc: 'Cofundador de Gallinet, un proyecto que aplica la robótica a un problema real del sector agroalimentario. El proyecto fue reconocido con el Premio Talento Emprendedor UJI (IV Edición). Desarrollo íntegramente la web del proyecto, desde la concepción hasta su implementación.',
             empire: '🚀 Empire Attack',
             empireDesc: 'Videojuego arcade desarrollado en Python utilizando la biblioteca Pygame, inspirado en el universo de Star Wars y diseñado para ofrecer una experiencia retro.',
             ros: '🤖 Proyectos de ROS2',
@@ -25,6 +27,8 @@ window.addEventListener('DOMContentLoaded', function() {
         en: {
             title: 'Projects - Raúl Antón Echevarría',
             h1: 'Projects',
+            gallinet: '🐔 Gallinet',
+            gallinetDesc: 'Co-founder of Gallinet, a project that applies robotics to a real problem in the agri-food sector. The project was recognized with the UJI Entrepreneurial Talent Award (IV Edition). I developed the entire project website, from conception to implementation.',
             empire: '🚀 Empire Attack',
             empireDesc: 'Arcade video game developed in Python using the Pygame library, inspired by the Star Wars universe and designed to offer a retro experience.',
             ros: '🤖 ROS2 Projects',
@@ -41,6 +45,9 @@ window.addEventListener('DOMContentLoaded', function() {
     function setLang(lang) {
         document.title = translations[lang].title;
         document.querySelector('h1').textContent = translations[lang].h1;
+        // Gallinet
+        document.getElementById('gallinet-title').textContent = translations[lang].gallinet;
+        document.getElementById('gallinet-desc').textContent = translations[lang].gallinetDesc;
         // Empire Attack
         document.getElementById('empire-title').textContent = translations[lang].empire;
         document.getElementById('empire-desc').textContent = translations[lang].empireDesc;
